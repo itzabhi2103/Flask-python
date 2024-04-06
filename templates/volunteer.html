@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volunteer</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+<section class="contact">
+        <div class="content">
+            <h2>Volunteer Login</h2>
+        </div>
+        <div class="container">
+            <div class="contactForm">
+                <form action="{{ url_for('event_details') }}">
+                    <h2>Volunteer</h2>
+                    <div class="inputBox">
+                        <input type="text" required="required" name="name">
+                        <span>Name:</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" required="required" name="age">
+                        <span>Age:(min.18)</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" required="required" name="contact_info">
+                        <span>Contact Info.</span>
+                    </div>
+                    <div class="submit">
+                        <div class="inputBox">
+                            <input type="submit" value="Take me to Event">
+                        </div>
+                        <div class="inputBox">
+                            <a href="{{ url_for('home') }}"><input type="button" value="Back to Home"></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

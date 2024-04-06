@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organisation</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <section class="contact">
+        <div class="content">
+            <h2>Create or Mark an Event</h2>
+        </div>
+        <div class="container">
+            <div class="contactForm">
+                <form action="{{ url_for('organisation') }}" method="post">
+                    <h2>Organiser</h2>
+                    <div class="inputBox">
+                        <input type="text" name="event_name" required="required">
+                        <span>Event Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="date" name="event_date" size="30" required="required">
+                    </div>
+                    <div class="inputBox">
+                        <input type="number" name="num_volunteers" required="required">
+                        <span>No. of Volunteers:</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="event_description" required="required"></textarea>
+                        <span>Event Description....</span>
+                    </div>
+
+                    <div class="submit">
+                        <div class="inputBox">
+                            <input type="submit" value="Mark an Event">
+                        </div>
+                        <div class="inputBox">
+                            <a href="{{ url_for('home') }}"><input type="button" value="Back to Home"></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Details</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="event-details">
+        <h2>Available Event Details</h2>
+        {% for event in events %}
+        <div class="card">
+            <h3>Event-Name: {{ event.title }}</h3>
+            <p>Date: {{ event.date }}</p>
+            <p>Number of Volunteers: {{ event.volunteers }}</p>
+            <p>Description: {{ event.description }}</p>
+        </div>
+        {% endfor %}
+        <a href="{{ url_for('home') }}"><button id="backToWelcomeFromDetails">Back to Home</button></a>
+    </div>
+</body>
+</html>
